@@ -31,9 +31,9 @@ Add ```com.vlonjatg.progressactivity.ProgressFrameLayout``` or ```com.vlonjatg.p
 
 ```xml
 <com.vlonjatg.progressactivity.ProgressRelativeLayout
-	android:id="@+id/progressActivity"
+    android:id="@+id/progressActivity"
     android:layout_width="match_parent"
-	android:layout_height="match_parent"
+    android:layout_height="match_parent"
     android:layout_below="@+id/activityToolbar"
     progressActivity:loadingBackgroundColor="#FFFFFF"
     progressActivity:emptyBackgroundColor="#fbc02d"
@@ -45,8 +45,8 @@ Add ```com.vlonjatg.progressactivity.ProgressFrameLayout``` or ```com.vlonjatg.p
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="@string/hello_world" />
-
-    </com.vlonjatg.progressactivity.ProgressRelativeLayout>
+    
+</com.vlonjatg.progressactivity.ProgressRelativeLayout>
 ```
 
 Then in your code:
@@ -124,10 +124,6 @@ There are a bunch of attributes to customize the views.
 
 An [example](https://github.com/vlonjatg/progress-activity/tree/master/sample) is available.
 
-### Developed By
-
-Vlonjat Gashi - [Twitter](https://twitter.com/vlonjatg)
-
 ### Attributes
 
 This library is inspired by [AndroidProgressLayout](https://github.com/antonkrasov/AndroidProgressLayout) library from Anton Krasov.
@@ -136,26 +132,3 @@ This library is inspired by [AndroidProgressLayout](https://github.com/antonkras
 
 progress-activity is available under the [MIT](http://opensource.org/licenses/MIT) licence.
 
-```
-The MIT License (MIT)
-
-Copyright (c) 2015 Vlonjat Gashi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
