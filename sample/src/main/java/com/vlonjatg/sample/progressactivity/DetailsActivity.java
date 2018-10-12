@@ -71,6 +71,8 @@ public class DetailsActivity extends AppCompatActivity {
                 progressLayout.showContent();
                 setTitle("Content");
                 break;
+            default:
+                break;
         }
     }
 

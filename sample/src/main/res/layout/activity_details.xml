@@ -1,4 +1,5 @@
-<com.vlonjatg.progressactivity.ProgressConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vlonjatg.progressactivity.ProgressConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
     android:id="@+id/progress"
     android:layout_width="match_parent"
@@ -13,7 +14,8 @@
     progressActivity:errorContentTextColor="#FFFFFF"
     progressActivity:errorTitleTextColor="#FFFFFF"
     progressActivity:loadingBackgroundColor="#FFFFFF"
-    progressActivity:loadingProgressBarColor="#9C27B0">
+    progressActivity:loadingProgressBarColor="#9C27B0"
+    progressActivity:loadingProgressBarWidth="wrap_content">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,7 +25,7 @@
         android:theme="@style/Toolbar"
         progressActivity:layout_constraintEnd_toEndOf="parent"
         progressActivity:layout_constraintStart_toStartOf="parent"
-        progressActivity:layout_constraintTop_toTopOf="parent" />
+        progressActivity:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/text_hello"
@@ -36,7 +38,7 @@
         progressActivity:layout_constraintBottom_toBottomOf="parent"
         progressActivity:layout_constraintEnd_toEndOf="parent"
         progressActivity:layout_constraintStart_toStartOf="parent"
-        progressActivity:layout_constraintTop_toTopOf="parent" />
+        progressActivity:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -45,7 +47,7 @@
         android:text="Hi"
         progressActivity:layout_constraintBottom_toBottomOf="parent"
         progressActivity:layout_constraintEnd_toEndOf="parent"
-        progressActivity:layout_constraintStart_toStartOf="parent" />
+        progressActivity:layout_constraintStart_toStartOf="parent"/>
 
 </com.vlonjatg.progressactivity.ProgressConstraintLayout>
 

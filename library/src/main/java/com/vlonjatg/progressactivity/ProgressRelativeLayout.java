@@ -34,7 +34,7 @@ public class ProgressRelativeLayout extends RelativeLayout implements ProgressLa
     private List<View> contentViews = new ArrayList<>();
 
     private View loadingState;
-    private ProgressBar loadingStateProgressBar;
+    private View loadingStateProgressBar;
 
     private View emptyState;
     private ImageView emptyStateImageView;
@@ -93,10 +93,10 @@ public class ProgressRelativeLayout extends RelativeLayout implements ProgressLa
 
         //Loading state attrs
         loadingStateProgressBarWidth =
-                typedArray.getDimensionPixelSize(R.styleable.ProgressActivity_loadingProgressBarWidth, 108);
+                typedArray.getLayoutDimension(R.styleable.ProgressActivity_loadingProgressBarWidth, 108);
 
         loadingStateProgressBarHeight =
-                typedArray.getDimensionPixelSize(R.styleable.ProgressActivity_loadingProgressBarHeight, 108);
+                typedArray.getLayoutDimension(R.styleable.ProgressActivity_loadingProgressBarHeight, 108);
 
         loadingStateProgressBarColor =
                 typedArray.getColor(R.styleable.ProgressActivity_loadingProgressBarColor, Color.RED);
@@ -251,6 +251,8 @@ public class ProgressRelativeLayout extends RelativeLayout implements ProgressLa
                 errorStateButton.setText(buttonText);
                 errorStateButton.setOnClickListener(buttonClickListener);
                 break;
+            default:
+                break;
         }
     }
 
@@ -285,6 +287,8 @@ public class ProgressRelativeLayout extends RelativeLayout implements ProgressLa
                 errorStateContentTextView.setText(description);
                 errorStateButton.setText(buttonText);
                 errorStateButton.setOnClickListener(buttonClickListener);
+                break;
+            default:
                 break;
         }
     }
@@ -335,8 +339,10 @@ public class ProgressRelativeLayout extends RelativeLayout implements ProgressLa
             loadingStateProgressBar = view.findViewById(R.id.progress_bar_loading);
             loadingStateProgressBar.getLayoutParams().width = loadingStateProgressBarWidth;
             loadingStateProgressBar.getLayoutParams().height = loadingStateProgressBarHeight;
-            loadingStateProgressBar.getIndeterminateDrawable()
-                    .setColorFilter(loadingStateProgressBarColor, PorterDuff.Mode.SRC_IN);
+            if (loadingStateProgressBar instanceof ProgressBar) {
+                ((ProgressBar) loadingStateProgressBar).getIndeterminateDrawable()
+                        .setColorFilter(loadingStateProgressBarColor, PorterDuff.Mode.SRC_IN);
+            }
             loadingStateProgressBar.requestLayout();
 
             if (loadingStateBackgroundColor != Color.TRANSPARENT) {
